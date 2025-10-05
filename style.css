@@ -1,0 +1,51 @@
+nav{
+    height: 300px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 5px solid blue;
+}
+.alan-sans- {
+  font-family: "Alan Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+body {
+  margin: 0; /* retire les marges par défaut */
+  min-height: 100vh; /* au moins toute la hauteur de l'écran */
+  background-color: black;
+  background-size: cover;       /* étire / adapte pour remplir */
+  background-position: center;  /* centre l’image */
+  background-repeat: no-repeat; /* pas de répétition */
+}
+.grid-photos{
+  padding: 5vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-rows: 150px;
+  gap: 20px; 
+  justify-content: center;
+  
+}
+.grid-photos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* garde les proportions, coupe ce qui dépasse */
+  object-position: center; /* centre l’image */
+  border-radius: 10px;  /* optionnel : coins arrondis */
+  border: 3px solid transparent; /* bordure invisible par défaut */
+}
+img:hover {
+  transform: scale(1.1); /* zoom */
+  border: 3px solid blue;
+  filter: brightness(70%);
+
+}
+.grid-photos img.selected {
+  border: 5px solid blue;
+  box-sizing: border-box;
+}
